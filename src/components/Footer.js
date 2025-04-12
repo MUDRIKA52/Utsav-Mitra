@@ -23,11 +23,11 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Follow us on:</h3>
           <div className="social-icons">
-            <a href="javascript:void(0)">Facebook</a>
-            <a href="javascript:void(0)">Twitter</a>
-            <a href="javascript:void(0)">Pinterest</a>
-            <a href="javascript:void(0)">Instagram</a>
-            <a href="javascript:void(0)">YouTube</a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer">Pinterest</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
           </div>
 
           <h3>Get The WedMeGood App</h3>
@@ -52,57 +52,57 @@ const Footer = () => {
       <div className="footer-links">
         <div>
           <h4>Start Planning</h4>
-          <a href="javascript:void(0)">Search By Vendor</a>
-          <a href="javascript:void(0)">Search By City</a>
-          <a href="javascript:void(0)">Download Our App</a>
-          <a href="javascript:void(0)">Top Rated Vendors</a>
-          <a href="javascript:void(0)">Destination Wedding</a>
+          <a href="/search-by-vendor">Search By Vendor</a>
+          <a href="/search-by-city">Search By City</a>
+          <a href="/download-app">Download Our App</a>
+          <a href="/top-rated-vendors">Top Rated Vendors</a>
+          <a href="/destination-wedding">Destination Wedding</a>
         </div>
 
         <div>
           <h4>Wedding Ideas</h4>
-          <a href="javascript:void(0)">Wedding Blog</a>
-          <a href="javascript:void(0)">Wedding Inspiration Gallery</a>
-          <a href="javascript:void(0)">Real Wedding</a>
-          <a href="javascript:void(0)">Submit Wedding</a>
+          <a href="/wedding-blog">Wedding Blog</a>
+          <a href="/wedding-inspiration-gallery">Wedding Inspiration Gallery</a>
+          <a href="/real-wedding">Real Wedding</a>
+          <a href="/submit-wedding">Submit Wedding</a>
         </div>
 
         <div>
           <h4>Photo Gallery</h4>
-          <a href="javascript:void(0)">Bridal Wear</a>
-          <a href="javascript:void(0)">Wedding Jewellery</a>
-          <a href="javascript:void(0)">Bridal Makeup & Hair</a>
-          <a href="javascript:void(0)">Wedding Decor</a>
-          <a href="javascript:void(0)">Wedding Photography</a>
-          <a href="javascript:void(0)">Groom Wear</a>
-          <a href="javascript:void(0)">Invitations & Favors</a>
-          <a href="javascript:void(0)">Wedding Accessories</a>
-          <a href="javascript:void(0)">Mehendi Designs</a>
+          <a href="/bridal-wear">Bridal Wear</a>
+          <a href="/wedding-jewellery">Wedding Jewellery</a>
+          <a href="/bridal-makeup-hair">Bridal Makeup & Hair</a>
+          <a href="/wedding-decor">Wedding Decor</a>
+          <a href="/wedding-photography">Wedding Photography</a>
+          <a href="/groom-wear">Groom Wear</a>
+          <a href="/invitations-favors">Invitations & Favors</a>
+          <a href="/wedding-accessories">Wedding Accessories</a>
+          <a href="/mehendi-designs">Mehendi Designs</a>
         </div>
 
         <div>
           <h4>Home</h4>
-          <a href="javascript:void(0)">About WedMeGood</a>
-          <a href="javascript:void(0)">Careers</a>
-          <a href="javascript:void(0)">Contact Us</a>
-          <a href="javascript:void(0)">Site Map</a>
-          <a href="javascript:void(0)">Terms & Conditions</a>
-          <a href="javascript:void(0)">Privacy Policy</a>
-          <a href="javascript:void(0)">Cancellation Policy</a>
+          <a href="/about-wedmegood">About WedMeGood</a>
+          <a href="/careers">Careers</a>
+          <a href="/contact-us">Contact Us</a>
+          <a href="/site-map">Site Map</a>
+          <a href="/terms-conditions">Terms & Conditions</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/cancellation-policy">Cancellation Policy</a>
         </div>
 
         <div>
           <h4>Wedding Invitation Maker</h4>
-          <a href="javascript:void(0)">Wedding Card Designs</a>
-          <a href="javascript:void(0)">Save the Date Templates</a>
-          <a href="javascript:void(0)">Invitation Video Templates</a>
+          <a href="/wedding-card-designs">Wedding Card Designs</a>
+          <a href="/save-the-date-templates">Save the Date Templates</a>
+          <a href="/invitation-video-templates">Invitation Video Templates</a>
         </div>
       </div>
 
       {/* Copyright */}
       <div className="footer-bottom">
         <p>© 2025 WedMeGood</p>
-        <p><a href="javascript:void(0)">Terms & Conditions</a> | <a href="javascript:void(0)">Privacy Policy</a></p>
+        <p><a href="/terms-conditions">Terms & Conditions</a> | <a href="/privacy-policy">Privacy Policy</a></p>
       </div>
     </footer>
   );
