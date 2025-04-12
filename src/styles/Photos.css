@@ -1,0 +1,161 @@
+/* 🏞️ Photos Container */
+.photos-container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff9f3;
+  }
+  
+  /* 🏷️ Title */
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d63384;
+  }
+  
+  /* 📌 Category Selection */
+  .category-select {
+    margin-bottom: 20px;
+  }
+  
+  .category-select label {
+    font-size: 18px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .category-select select {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #d63384;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* 🚨 Error & Loading Messages */
+  .error {
+    color: red;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .loading {
+    font-size: 18px;
+    color: #d63384;
+    font-weight: bold;
+  }
+  
+  /* 📌 Category Title */
+  .category-title {
+    font-size: 24px;
+    margin-top: 30px;
+    color: #444;
+    text-transform: capitalize;
+  }
+  
+  /* 🖼️ Photo Grid Layout */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Auto-fill layout */
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  /* 📸 Photo Card */
+  .photo-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .photo-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 🖼️ Photo Image */
+  .photo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* 📱 Responsive Design */
+  @media (max-width: 1024px) {
+    .title {
+      font-size: 28px;
+    }
+  
+    .category-title {
+      font-size: 22px;
+    }
+  
+    .photo-grid {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px;
+    }
+  
+    .photo-card {
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .photos-container {
+      padding: 20px;
+    }
+  
+    .title {
+      font-size: 26px;
+    }
+  
+    .category-title {
+      font-size: 20px;
+    }
+  
+    .category-select label {
+      font-size: 16px;
+    }
+  
+    .category-select select {
+      font-size: 14px;
+      padding: 6px;
+    }
+  
+    .photo-grid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .photos-container {
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 24px;
+    }
+  
+    .category-title {
+      font-size: 18px;
+    }
+  
+    .photo-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 8px;
+    }
+  
+    .photo-card {
+      border-radius: 8px;
+    }
+  
+    .category-select label {
+      font-size: 14px;
+    }
+  
+    .category-select select {
+      font-size: 12px;
+      padding: 5px;
+    }
+  }
+  

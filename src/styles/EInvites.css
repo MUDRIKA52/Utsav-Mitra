@@ -1,0 +1,126 @@
+/* E-Invites Container */
+.e-invites-container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff9f3;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 2rem; /* Scales with screen */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d63384;
+  }
+  
+  /* Category Selection */
+  .category-select {
+    margin-bottom: 20px;
+  }
+  
+  .category-select label {
+    font-size: 1.2rem; /* Adjusts on smaller screens */
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .category-select select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 2px solid #d63384;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Error Message */
+  .error {
+    color: red;
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  /* Category Title */
+  .category-title {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    color: #444;
+    text-transform: capitalize;
+  }
+  
+  /* Photo Grid (Responsive) */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  /* Photo Card */
+  .photo-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .photo-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Photo Image */
+  .photo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) { /* Tablets & Small Laptops */
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .category-select label {
+      font-size: 1rem;
+    }
+  
+    .category-select select {
+      font-size: 0.9rem;
+      padding: 6px;
+    }
+  
+    .category-title {
+      font-size: 1.5rem;
+    }
+  
+    .photo-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusts for smaller screens */
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) { /* Mobile Devices */
+    .title {
+      font-size: 1.6rem;
+    }
+  
+    .category-select label {
+      font-size: 0.9rem;
+    }
+  
+    .category-select select {
+      font-size: 0.8rem;
+      padding: 5px;
+    }
+  
+    .category-title {
+      font-size: 1.3rem;
+    }
+  
+    .photo-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Stacks images nicely */
+      gap: 8px;
+    }
+  }
+  

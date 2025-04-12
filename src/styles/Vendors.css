@@ -1,0 +1,164 @@
+/* 🎉 Vendors Page Styling */
+.vendors-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+  }
+  
+  /* 🏷️ Vendors Title */
+  .vendors-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* 🎯 Category Filter */
+  .category-filter {
+    margin-bottom: 20px;
+  }
+  
+  .category-filter label {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  
+  .category-filter select {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /* 🛍️ Vendor List - Responsive Grid */
+  .vendor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* 📦 Vendor Card */
+  .vendor-card {
+    width: 280px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .vendor-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* 🖼️ Vendor Image */
+  .vendor-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  /* 📌 Vendor Details */
+  .vendor-details {
+    padding: 15px;
+  }
+  
+  .vendor-price {
+    font-weight: bold;
+    color: #ff4081;
+  }
+  
+  /* 🎭 Vendor Modal */
+  .vendor-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .vendor-modal-content {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 90%;
+  }
+  
+  /* ❌ Close Button */
+  .close-btn {
+    background: #ff4081;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* 📱 Responsive Design */
+  @media (max-width: 1024px) {
+    .vendors-container {
+      padding: 15px;
+    }
+  
+    .vendors-title {
+      font-size: 1.8rem;
+    }
+  
+    .vendor-list {
+      gap: 15px;
+    }
+  
+    .vendor-card {
+      width: 250px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .vendors-title {
+      font-size: 1.6rem;
+    }
+  
+    .category-filter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .vendor-list {
+      gap: 12px;
+    }
+  
+    .vendor-card {
+      width: 220px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .vendors-container {
+      padding: 10px;
+    }
+  
+    .vendors-title {
+      font-size: 1.5rem;
+    }
+  
+    .vendor-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .vendor-card {
+      width: 90%;
+    }
+  }
+  
