@@ -18,7 +18,7 @@ const UNSPLASH_ACCESS_KEY = "658q6w5aw4CjYaImiPaWN7EfmNxnuEvI10cjo_Ohuew"; // Re
 
 function Home() {
   const [photos, setPhotos] = useState({});
-  const [searchQuery, setSearchQuery] = useState("");
+ 
 
   useEffect(() => {
     const fetchPhotos = async () => {
