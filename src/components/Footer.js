@@ -7,15 +7,15 @@ const Footer = () => {
       <div className="footer-top">
         {/* Company Info */}
         <div className="footer-section">
-          <h3>WedMeGood - Your Personal Wedding Planner</h3>
+          <h3>Utsav Mitra- Your Personal Wedding Planner</h3>
           <p>Plan your wedding with us</p>
         </div>
 
         {/* Contact Details */}
         <div className="footer-section">
           <h3>Contact us to get best deals</h3>
-          <p><strong>For Vendors:</strong> vendors@wedmegood.com | 0124-6812346</p>
-          <p><strong>For Users:</strong> info@wedmegood.com | 0124-6812345</p>
+          <p><strong>For Vendors:</strong> vendors@utsavmitra.com | 0124-6812346</p>
+          <p><strong>For Users:</strong> info@utsavmitra.com | 0124-6812345</p>
           <p><strong>Registered Address:</strong> Second Floor, Ocus Technopolis, Sector 54 Golf Course Road, Gurgaon, Haryana, India, 122002</p>
         </div>
 
@@ -30,23 +30,19 @@ const Footer = () => {
             <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
           </div>
 
-          <h3>Get The WedMeGood App</h3>
-          <div className="app-links">
-            <img src="appstore.png" alt="App Store" />
-            <img src="playstore.png" alt="Google Play" />
-          </div>
+          
         </div>
       </div>
 
       {/* Newsletter Subscription */}
-      <div className="newsletter">
+      {/* <div className="newsletter">
         <h3>Get Latest Blog Alerts</h3>
         <div className="newsletter-form">
           <input type="email" placeholder="Email*" />
           <button>Submit</button>
         </div>
         <button className="vendor-btn">Register as a Vendor</button>
-      </div>
+      </div> */}
 
       {/* Footer Links */}
       <div className="footer-links">
@@ -101,7 +97,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="footer-bottom">
-        <p>© 2025 WedMeGood</p>
+        <p>© 2025 Utsav Mitra</p>
         <p><a href="/terms-conditions">Terms & Conditions</a> | <a href="/privacy-policy">Privacy Policy</a></p>
       </div>
     </footer>

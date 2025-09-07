@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "../styles/Vendors.css"; // Import CSS file
+import "../styles/Vendors.css";
 
-// Dummy vendor data for 5 categories
 const vendorData = {
   "Event Planners": [
     { id: 1, name: "Grand Event Co.", location: "Mumbai", price: "₹50,000", image: "https://source.unsplash.com/400x300/?event,planning" },
@@ -30,21 +29,50 @@ const vendorData = {
 
 function Vendors() {
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [selectedVendor, setSelectedVendor] = useState(null);
+  const [bookingData, setBookingData] = useState({
+    vendor: "",
+    date: "",
+    slot: "Morning",
+  });
 
-  // Get vendors based on selected category
   const getVendors = () => {
     if (selectedCategory === "All Categories") {
-      return Object.values(vendorData).flat(); // Merge all categories
+      return Object.values(vendorData).flat();
     }
     return vendorData[selectedCategory] || [];
+  };
+
+  const handleBookNowClick = (vendorName) => {
+    setBookingData({ ...bookingData, vendor: vendorName });
+    setSidebarOpen(true);
+  };
+
+  const handleBookingSubmit = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/api/bookings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(bookingData),
+      });
+      if (response.ok) {
+        alert("Booking successful!");
+        setSidebarOpen(false);
+        setBookingData({ vendor: "", date: "", slot: "Morning" });
+      } else {
+        alert("Failed to book!");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Something went wrong!");
+    }
   };
 
   return (
     <div className="vendors-container">
       <h2 className="vendors-title">Find Trusted Vendors</h2>
 
-      {/* Dropdown to filter by category */}
       <div className="category-filter">
         <label>Sort by Category:</label>
         <select onChange={(e) => setSelectedCategory(e.target.value)} value={selectedCategory}>
@@ -55,25 +83,52 @@ function Vendors() {
         </select>
       </div>
 
-      {/* Vendor List */}
       <div className="vendor-list">
         {getVendors().map((vendor) => (
-          <div key={vendor.id} className="vendor-card" onClick={() => setSelectedVendor(vendor)}>
-            <img src={vendor.image} alt={vendor.name} className="vendor-image" />
+          <div key={vendor.id} className="vendor-card">
             <div className="vendor-details">
               <h3>{vendor.name}</h3>
               <p className="vendor-location">{vendor.location}</p>
               <p className="vendor-price">{vendor.price}</p>
+              <button className="book-now-btn" onClick={() => handleBookNowClick(vendor.name)}>Book Now</button>
+              <button className="more-info-btn" onClick={() => setSelectedVendor(vendor)}>More Info</button>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Vendor Detail Popup */}
+      {sidebarOpen && (
+        <div className="sidebar">
+          <div className="sidebar-content">
+            <h3>Booking Details</h3>
+            <p><strong>Vendor:</strong> {bookingData.vendor}</p>
+
+            <label>Select Date:</label>
+            <input
+              type="date"
+              value={bookingData.date}
+              onChange={(e) => setBookingData({ ...bookingData, date: e.target.value })}
+            />
+
+            <label>Slot:</label>
+            <select
+              value={bookingData.slot}
+              onChange={(e) => setBookingData({ ...bookingData, slot: e.target.value })}
+            >
+              <option value="Morning">Morning</option>
+              <option value="Evening">Evening</option>
+            </select>
+
+            <button className="submit-btn" onClick={handleBookingSubmit}>Book Now</button>
+            <button className="close-btn" onClick={() => setSidebarOpen(false)}>Close</button>
+          </div>
+        </div>
+      )}
+
       {selectedVendor && (
         <div className="vendor-modal" onClick={() => setSelectedVendor(null)}>
-          <div className="vendor-modal-content">
-            <img src={selectedVendor.image} alt={selectedVendor.name} className="vendor-modal-image" />
+          <div className="vendor-modal-content" onClick={(e) => e.stopPropagation()}>
+         {/*    <img src={selectedVendor.image} alt={selectedVendor.name} className="vendor-modal-image" /> */}
             <h3>{selectedVendor.name}</h3>
             <p><strong>Location:</strong> {selectedVendor.location}</p>
             <p><strong>Price:</strong> {selectedVendor.price}</p>
@@ -86,3 +141,5 @@ function Vendors() {
 }
 
 export default Vendors;
+
+

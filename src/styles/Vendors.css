@@ -1,164 +1,220 @@
 /* 🎉 Vendors Page Styling */
 .vendors-container {
-    max-width: 1000px;
-    margin: 40px auto;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
-  }
-  
-  /* 🏷️ Vendors Title */
-  .vendors-title {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  /* 🎯 Category Filter */
-  .category-filter {
-    margin-bottom: 20px;
-  }
-  
-  .category-filter label {
-    font-size: 1rem;
-    margin-right: 10px;
-  }
-  
-  .category-filter select {
-    padding: 8px;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 2px solid #ddd;
-    outline: none;
-    cursor: pointer;
-  }
-  
-  /* 🛍️ Vendor List - Responsive Grid */
-  .vendor-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  /* 📦 Vendor Card */
-  .vendor-card {
-    width: 280px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .vendor-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* 🖼️ Vendor Image */
-  .vendor-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-  
-  /* 📌 Vendor Details */
-  .vendor-details {
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+.vendors-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.category-filter {
+  margin-bottom: 20px;
+}
+
+.category-filter label {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.category-filter select {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 🛍️ Vendor List */
+.vendor-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* 📦 Vendor Card */
+div.vendor-card {
+  width: 280px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+div.vendor-card:hover {
+  transform: scale(1.02);
+}
+
+img.vendor-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.vendor-details {
+  padding: 15px;
+}
+
+.vendor-price {
+  font-weight: bold;
+  color: #ff4081;
+}
+
+/* 🎭 Vendor Modal */
+div.vendor-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.vendor-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+img.vendor-modal-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* 🧾 Sidebar */
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: #f8f8f8;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.sidebar-content label {
+  display: block;
+  margin-top: 10px;
+}
+
+.sidebar-content select,
+.sidebar-content input[type="date"] {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+/* 🧷 Buttons */
+button.book-now-btn,
+button.submit-btn,
+button.close-btn,
+button.more-info-btn
+{
+  padding: 8px 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin: 5px;
+}
+
+button.close-btn {
+  background-color: #ff4081;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+  .vendors-container {
     padding: 15px;
   }
-  
-  .vendor-price {
-    font-weight: bold;
-    color: #ff4081;
+
+  .vendors-title {
+    font-size: 1.8rem;
   }
-  
-  /* 🎭 Vendor Modal */
-  .vendor-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+
+  .vendor-list {
+    gap: 15px;
+  }
+
+  .vendor-card {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vendors-title {
+    font-size: 1.6rem;
+  }
+
+  .category-filter {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
   }
-  
+
+  .vendor-list {
+    gap: 12px;
+  }
+
+  .vendor-card {
+    width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vendors-container {
+    padding: 10px;
+  }
+
+  .vendors-title {
+    font-size: 1.5rem;
+  }
+
+  .vendor-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vendor-card {
+    width: 90%;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    top: auto;
+    bottom: 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  max-height: 90vh;
+  }
+
   .vendor-modal-content {
-    background: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    max-width: 90%;
+    width: 95%;
   }
-  
-  /* ❌ Close Button */
-  .close-btn {
-    background: #ff4081;
-    color: white;
-    padding: 8px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* 📱 Responsive Design */
-  @media (max-width: 1024px) {
-    .vendors-container {
-      padding: 15px;
-    }
-  
-    .vendors-title {
-      font-size: 1.8rem;
-    }
-  
-    .vendor-list {
-      gap: 15px;
-    }
-  
-    .vendor-card {
-      width: 250px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .vendors-title {
-      font-size: 1.6rem;
-    }
-  
-    .category-filter {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-  
-    .vendor-list {
-      gap: 12px;
-    }
-  
-    .vendor-card {
-      width: 220px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .vendors-container {
-      padding: 10px;
-    }
-  
-    .vendors-title {
-      font-size: 1.5rem;
-    }
-  
-    .vendor-list {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .vendor-card {
-      width: 90%;
-    }
-  }
-  
+}

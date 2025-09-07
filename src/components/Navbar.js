@@ -12,6 +12,8 @@ const Navbar = () => {
   const [blogDropdownOpen, setBlogDropdownOpen] = useState(false); // ✅ Define state properly
   const [eInvitesDropdownOpen, setEInvitesDropdownOpen] = useState(false); // ✅ New State for E-Invites
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [loginDropdownOpen, setLoginDropdownOpen] = useState(false);
+
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -43,24 +45,24 @@ const Navbar = () => {
       {/* Top Navigation Bar */}
       <div className="top-nav">
         <span>India's Favourite Wedding Planning Platform</span>
-        <select className="city-select">
+       {/*  <select className="city-select">
           <option>All Cities</option>
           <option>Delhi</option>
           <option>Mumbai</option>
-        </select>
+        </select> */}
         <div className="top-links">
           <span>
             <FaStar /> Write A Review
           </span>
           <span>
-            <FaMobileAlt /> Download App
+          {/*   <FaMobileAlt /> Download App */}
           </span>
         </div>
       </div>
 
       {/* Main Navigation Bar */}
       <nav className="navbar">
-      <img alt="wmg logo" class="middle logo" id="wmg-hp" src="https://images.wedmegood.com/images/WMG-logo.svg" width="194" height="30"></img>
+         <h3 className="logo" width="194" height="30" color="white">UTSAV MITRA</h3> 
         {/* <div className="logo">WedMeGood</div>
  */}
         {/* Navigation Links */}
@@ -95,19 +97,7 @@ const Navbar = () => {
                     <li>Kolkata</li>
                   </ul>
                 </div>
-                <div className="dropdown-section">
-                  <h3>Destination Wedding Venues</h3>
-                  <div className="venue-images">
-                    <div className="venue-item">
-                      <img src="goa.jpg" alt="Goa" />
-                      <span>Goa</span>
-                    </div>
-                    <div className="venue-item">
-                      <img src="C:\Users\Asus\utsav\src\assets\Real life wedding\MARWARI WEDDING 8.jpg" alt="Jaipur" />
-                      <span>Jaipur</span>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
             )}
           </li>
@@ -166,7 +156,7 @@ const Navbar = () => {
 
             {photosDropdownOpen && (
               <div className="dropdown-content">
-                <div className="dropdown-section">
+                {/* <div className="dropdown-section">
                   <h3>Outfit</h3>
                   <ul>
                     <li>Bridal Lehenga</li>
@@ -176,8 +166,8 @@ const Navbar = () => {
                     <li>Blouse Designs</li>
                     <li>More</li>
                   </ul>
-                </div>
-                <div className="dropdown-section">
+                </div> */}
+                {/* <div className="dropdown-section">
                   <h3>Jewellery & Accessories</h3>
                   <ul>
                     <li>Bridal Jewellery</li>
@@ -185,7 +175,7 @@ const Navbar = () => {
                     <li>Floral Jewellery</li>
                     <li>More</li>
                   </ul>
-                </div>
+                </div> */}
                 <div className="dropdown-section">
                   <h3>Mehndi</h3>
                   <ul>
@@ -206,7 +196,7 @@ const Navbar = () => {
                     <li>More</li>
                   </ul>
                 </div>
-                <div className="dropdown-section">
+              {/*   <div className="dropdown-section">
                   <h3>Wedding Card Designs</h3>
                   <ul>
                     <li>Designs</li>
@@ -214,7 +204,7 @@ const Navbar = () => {
                     <li>Wedding Invitations</li>
                     <li>More</li>
                   </ul>
-                </div>
+                </div> */}
                 <div className="dropdown-section">
                   <h3>Wedding Photography</h3>
                   <ul>
@@ -224,15 +214,15 @@ const Navbar = () => {
                     <li>More</li>
                   </ul>
                 </div>
-                <div className="dropdown-section">
+               {/*  <div className="dropdown-section">
                   <h3>Groom Wear</h3>
                   <ul>
                     <li>Sherwani for Groom</li>
                     <li>Wedding Suits for Groom</li>
                     <li>More</li>
                   </ul>
-                </div>
-                <div className="dropdown-section">
+                </div> */}
+                {/* <div className="dropdown-section">
                   <h3>Bridal Makeup & Hair</h3>
                   <ul>
                     <li>Bridal Makeup</li>
@@ -241,7 +231,7 @@ const Navbar = () => {
                     <li>Mehndi</li>
                     <li>More</li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             )}
           </li>
@@ -291,19 +281,7 @@ const Navbar = () => {
                     <li>Others</li>
                   </ul>
                 </div>
-                <div className="dropdown-section">
-                  <h3>Latest Real Weddings</h3>
-                  <div className="wedding-images">
-                    <div className="wedding-item">
-                      <img src="yashika-yug.jpg" alt="Yashika and Yug (Rajasthan)" />
-                      <span>Yashika and Yug (Rajasthan)</span>
-                    </div>
-                    <div className="wedding-item">
-                      <img src="devika-krishi.jpg" alt="Devika and Krishi (Udaipur)" />
-                      <span>Devika and Krishi (Udaipur)</span>
-                    </div>
-                  </div>
-                </div>
+               
               </div>
             )}
           </li>
@@ -317,7 +295,7 @@ const Navbar = () => {
             <Link to="/Blog" className="nav-link">Blog</Link>
             {blogDropdownOpen && (
               <div className="dropdown-content blog-dropdown">
-                <div className="dropdown-section">
+                {/* <div className="dropdown-section">
                   <h3>Browse by Category</h3>
                   <ul>
                     <li>Bridal Makeup</li>
@@ -327,7 +305,7 @@ const Navbar = () => {
                     <li>Wedding Decor Ideas</li>
                     <li>More</li>
                   </ul>
-                </div>
+                </div> */}
                 <div className="dropdown-section">
                   <h3>Popular Sections</h3>
                   <ul>
@@ -347,17 +325,7 @@ const Navbar = () => {
                     <li>Latest Sabyasachi Lehengas</li>
                   </ul>
                 </div>
-                <div className="dropdown-section blog-images">
-                  <h3>Top Blogs</h3>
-                  <div className="blog-item">
-                    <img src="https://via.placeholder.com/100" alt="Bridal Mehendi" />
-                    <span>Bridal Mehendi Designs</span>
-                  </div>
-                  <div className="blog-item">
-                    <img src="https://via.placeholder.com/100" alt="Honeymoon Hotels" />
-                    <span>Honeymoon Hotels</span>
-                  </div>
-                </div>
+                
               </div>
             )}
           </li>
@@ -387,13 +355,40 @@ const Navbar = () => {
         
 
         {/* Right Section */}
-        <div className="right-section">
-          <span className="search-icon">
-            <FaSearch />
-          </span>
-          <button className="login-btn">
-            <FaUser /> Log In
-          </button>
+    {/* Right Section */}
+<div className="right-section">
+  <span className="search-icon">
+  {/*   <FaSearch /> */}
+  <div
+    className="dropdown login-dropdown"
+    onMouseEnter={!isMobile ? () => setLoginDropdownOpen(true) : null}
+    onMouseLeave={!isMobile ? () => setLoginDropdownOpen(false) : null}
+    onClick={isMobile ? () => setLoginDropdownOpen(!loginDropdownOpen) : null}>
+  
+    <button className="login-btn">
+      <FaUser /> Login
+    </button>
+
+    {loginDropdownOpen && (
+      <div className="dropdown-content login-dropdown-content">
+        <ul>
+          <li>
+            <Link to="/login" className="nav-link">Login</Link>
+          </li>
+          <li>
+            <Link to="/signup" className="nav-link">Signup</Link>
+          </li>
+        </ul>
+      </div>
+    )}
+  </div>
+  </span>
+
+  {/* Login/Signup Dropdown */}
+  
+
+
+
 
           {/* Hamburger Menu */}
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>

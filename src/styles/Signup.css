@@ -1,0 +1,121 @@
+/* Signup Container */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #fef2f2, #fde2e2);
+  }
+  
+  /* Card */
+  .signup-card {
+    background-color: #fff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  /* Title */
+  .signup-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form */
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .signup-form input {
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+  }
+  
+  .signup-form input:focus {
+    border-color: #ff4d4f;
+    outline: none;
+  }
+  
+  /* Buttons */
+  .signup-btn,
+  .google-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .signup-btn {
+    background-color: #ff4d4f;
+    color: white;
+   
+  }
+  
+  .signup-btn:hover {
+    background-color: #e63946;
+  }
+  
+  .google-btn {
+    background-color: #4285f4;
+    color: white;
+    margin-top: 10px;
+    margin-left:80px ;
+  }
+  
+  .google-btn:hover {
+    background-color: #3367d6;
+  }
+  
+  /* Error Text */
+  .error-text {
+    color: #e63946;
+    font-size: 0.9rem;
+    margin-top: 12px;
+    text-align: center;
+  }
+  
+  /* OR Text */
+  .or-text {
+    text-align: center;
+    margin: 10px 0;
+    color: #999;
+  }
+  /* user role dropdown */
+  .signup-form select {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .signup-card {
+      padding: 20px 15px;
+    }
+  
+    .signup-title {
+      font-size: 1.5rem;
+    }
+  
+    .signup-form input,
+    .signup-btn,
+    .google-btn {
+      font-size: 0.95rem;
+      padding: 10px;
+    }
+  }
+  

@@ -1,0 +1,224 @@
+/* Container for dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+   
+  }
+  
+  /* Dropdown content container */
+  .login-dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff0f0;
+    border: 1px solid #e0bfbf;
+    padding: 12px 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    z-index: 1000;
+    min-width: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    overflow-x: hidden;
+  }
+  
+  /* Show the dropdown on hover */
+  .dropdown:hover .login-dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* Reset list style */
+  .login-dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* List items */
+  .login-dropdown-content li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e5a5a5;
+  }
+  
+  /* Remove border on last item */
+  .login-dropdown-content li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Style the links */
+  .login-dropdown-content li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: block;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+  }
+  
+  /* Link hover effect */
+  .login-dropdown-content li a:hover {
+    color: #e63946;
+    padding-left: 5px;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    .login-dropdown-content {
+      left: 0;
+      right: auto;
+      min-width: 10px;
+      padding: 10px 14px;
+    }
+  
+    .login-dropdown-content li a {
+      font-size: 0.9rem;
+    }
+  }
+  
+  
+  /* src/styles/Login.css */
+
+
+  /* Full-screen centered container */
+  .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    position: relative;
+  }
+  
+  /* Optional dimmed overlay */
+  .login-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 0;
+  }
+  
+  /* Glassmorphism card */
+  .login-wrapper {
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+  }
+  
+  /* Heading */
+  .login-heading {
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Subtext */
+  .login-subtext {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #555;
+    font-style: italic;
+  }
+  
+  /* Input fields */
+  .login-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    font-size: 15px;
+    transition: 0.3s ease;
+  }
+  
+  .login-form input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(248, 181, 0, 0.8);
+  }
+  
+  /* Button */
+  .login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f8b500;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .login-form button:hover {
+    background-color: #e6a300;
+  }
+  /* Responsive for tablets */
+@media (max-width: 768px) {
+    .login-wrapper {
+      padding: 30px 20px;
+      max-width: 90%;
+    }
+  
+    .login-heading {
+      font-size: 1.8rem;
+    }
+  
+    .login-subtext {
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Responsive for mobile */
+  @media (max-width: 480px) {
+    .login-wrapper {
+      padding: 25px 15px;
+    }
+  
+    .login-heading {
+      font-size: 1.5rem;
+    }
+  
+    .login-subtext {
+      font-size: 0.9rem;
+    }
+  
+    .login-form input,
+    .login-form button {
+      font-size: 0.95rem;
+      padding: 10px 12px;
+    }
+  }
+  /* Add in src/styles/Login.css */
+.login-error {
+  color: #ff4d4f;
+  margin-top: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+  @media (max-width: 768px) {
+    .login-dropdown-content {
+      left: 0;
+      right: auto;
+      width: 100px;
+      border-radius: 0;
+      min-width: unset;
+    }
+  }

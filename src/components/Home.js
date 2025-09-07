@@ -40,7 +40,7 @@ function Home() {
     <div className="home-container">
       {/* 🔍 Search Bar with Background */}
       <div className="search-bar">
-        <div className="search-bg">
+      {/*   <div className="search-bg">
           <input
             type="text"
             placeholder="Search for weddings, venues..."
@@ -48,7 +48,7 @@ function Home() {
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <button>🔍</button>
-        </div>
+        </div> */}
       </div>
 
       {/* 📸 Categories with Continuous Scrolling Images */}
