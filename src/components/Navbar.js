@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaSearch, FaBars, FaTimes, FaUser, FaStar, FaMobileAlt } from "react-icons/fa";
+import { FaBars, FaTimes, FaUser, FaStar } from "react-icons/fa";
 import "../styles/Navbar.css";
 import { Link } from "react-router-dom"; // ✅ Import Link
 
